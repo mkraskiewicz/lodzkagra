@@ -1,0 +1,16 @@
+<div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1>Aktywacja</h1>
+
+            <div class="alert alert-success" *ngIf="success">
+                <span><strong>Twoje konto zostalo aktywowane.</strong> Prosze </span>
+                <a class="alert-link" (click)="login()">zaloguj sie</a>.
+            </div>
+
+            <div class="alert alert-danger" *ngIf="error">
+                <strong>Twoje konto nie moglo zostac aktywowane.</strong> Prosze uzyj formy rejstracji by ponownie sie zarejstrowac.
+            </div>
+        </div>
+    </div>
+</div>

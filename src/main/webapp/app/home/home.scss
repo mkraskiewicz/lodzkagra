@@ -1,0 +1,62 @@
+/* ==========================================================================
+Main page styles
+========================================================================== */
+
+.hipster {
+  display: inline-block;
+  width: 347px;
+  height: 497px;
+  background: url('../../content/images/detective.png') no-repeat center top;
+  background-size: contain;
+}
+h3 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.lodz1 {
+  display: inline-block;
+  width: 897px;
+  height: 844px;
+  background: url('../../content/images/lodz1.png') no-repeat center top;
+  background-size: contain;
+}
+
+.lodz2 {
+  display: inline-block;
+  width: 897px;
+  height: 844px;
+  background: url('../../content/images/lodz2.png') no-repeat center top;
+  background-size: contain;
+}
+.lodz3 {
+  display: inline-block;
+  width: 897px;
+  height: 844px;
+  background: url('../../content/images/lodz3.png') no-repeat center top;
+  background-size: contain;
+}
+ngb-carousel .wrapper {
+  position: relative;
+  height: 0;
+  padding-top: 55%; /* Keep ratio for 900x500 images */
+}
+
+ngb-carousel .wrapper > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* wait autoprefixer update to allow simple generation of high pixel density media query */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (-moz-min-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .hipster {
+    background: url('../../content/images/jhipster_family_member_3.svg') no-repeat center top;
+    background-size: contain;
+  }
+}

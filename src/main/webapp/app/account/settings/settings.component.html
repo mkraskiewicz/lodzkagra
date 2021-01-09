@@ -1,0 +1,91 @@
+<div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 *ngIf="account">Ustawienia uzytkownika: [<b>{{ account.login }}</b>]</h2>
+
+            <div class="alert alert-success" *ngIf="success">
+                <strong>Ustawienia zapisane!</strong>
+            </div>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <form name="form" role="form" (ngSubmit)="save()" [formGroup]="settingsForm" *ngIf="account" novalidate>
+                <div class="form-group">
+                    <label class="form-control-label" for="firstName">Imie</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Your first name"
+                           formControlName="firstName">
+
+                    <div *ngIf="settingsForm.get('firstName')!.invalid && (settingsForm.get('firstName')!.dirty || settingsForm.get('firstName')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="settingsForm.get('firstName')?.errors?.required">
+                            Twoje imie jest wymagane.
+                        </small>
+
+                        <small class="form-text text-danger"
+                               *ngIf="settingsForm.get('firstName')?.errors?.minlength">
+                            Twoje imie musi zawierac przynajmniej jeden znak.
+                        </small>
+
+                        <small class="form-text text-danger"
+                               *ngIf="settingsForm.get('firstName')?.errors?.maxlength">
+                            Twoje imie nie moze byc dluzsze niz 50 znakow.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="lastName">Nazwisko</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Your last name"
+                           formControlName="lastName">
+
+                    <div *ngIf="settingsForm.get('lastName')!.invalid && (settingsForm.get('lastName')!.dirty || settingsForm.get('lastName')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="settingsForm.get('lastName')?.errors?.required">
+                            Twoje nazwisko jest wymagane.
+                        </small>
+
+                        <small class="form-text text-danger"
+                               *ngIf="settingsForm.get('lastName')?.errors?.minlength">
+                            Twoje nazwisko musi zawierac przynajmniej jeden znak.
+                        </small>
+
+                        <small class="form-text text-danger"
+                               *ngIf="settingsForm.get('lastName')?.errors?.maxlength">
+                            Twoje nazwisko nie moze byc dluzsze niz 50 znakow.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your email"
+                           formControlName="email">
+
+                    <div *ngIf="settingsForm.get('email')!.invalid && (settingsForm.get('email')!.dirty || settingsForm.get('email')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="settingsForm.get('email')?.errors?.required">
+                            Twoj email jest wymagany.
+                        </small>
+
+                        <small class="form-text text-danger"
+                               *ngIf="settingsForm.get('email')?.errors?.email">
+                            Podany email zawiera bledy.
+                        </small>
+
+                        <small class="form-text text-danger"
+                               *ngIf="settingsForm.get('email')?.errors?.minlength">
+                            Twoj email musi posiadac przynajmniej 5 znakow.
+                        </small>
+
+                        <small class="form-text text-danger"
+                               *ngIf="settingsForm.get('email')?.errors?.maxlength">
+                            Twoj email nie moze zawierac wiecej niz 100 znakow.
+                        </small>
+                    </div>
+                </div>
+
+                <button type="submit" [disabled]="settingsForm.invalid" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+</div>

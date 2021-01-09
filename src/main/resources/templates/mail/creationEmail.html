@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="en">
+    <head>
+        <title th:text="#{email.activation.title}">Stworzenie konta</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p th:text="#{email.activation.greeting(${user.login})}">
+            Witaj
+        </p>
+        <p th:text="#{email.creation.text1}">
+            twoje konto w Lodzkiej grze zostalo stworzone i aktywowane, kliknij w url:
+        </p>
+        <p>
+            <a th:with="url=(@{|${baseUrl}/account/reset/finish?key=${user.resetKey}|})" th:href="${url}"
+            th:text="${url}">Link do gry</a>
+        </p>
+        <p>
+            <span th:text="#{email.activation.text2}">Pozdrawiam, </span>
+            <br/>
+            <em th:text="#{email.signature}">Johnattan.</em>
+        </p>
+    </body>
+</html>

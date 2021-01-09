@@ -1,0 +1,33 @@
+<ngb-tabset class="tabset1" >
+
+
+
+
+    <ngb-tab *ngFor="let task of tasks; let i = index" title={{task.taskName}}>
+        <ng-template ngbTabContent>
+
+            <div class="card border-secondary mb-3" style="max-width: 100rem; align-content: center">
+                <h1 class="card-header">{{task.taskName}}</h1>
+
+                <div *ngIf="task.isCompleted">
+                    <img src='https://cdn2.iconfinder.com/data/icons/basic-ui-elements-16/117/correct-512.png' alt='image'>
+                    <h3>Zadanie ukonczone!</h3>
+                </div>
+                <div *ngIf="!task.isCompleted">
+
+                    {{task.taskDescription}}
+                    <br>
+                    <img src='{{task.imageUrl}}' alt='image'>
+                    <br>
+                    <label class="col-form-label" for="inputDefault">Odpowiedz na zadanie:</label>
+                    <input #answer type="text" class="form-control" placeholder="Wpisz tu odpowiedz" id="inputDefault">
+                    <div *ngIf="wrong" >Nieprawidłowa odpowiedź. Spróbuj ponownie!</div>
+                    <div class="col-xs-12">
+                        <button class="btn btn-primary btn-lg" (click)="sendAnswer(answer.value, task)">Sprawdz odpowiedz!</button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </ngb-tab>
+
+</ngb-tabset>

@@ -1,0 +1,68 @@
+<div [ngSwitch]="isAuthenticated()" class="row">
+<div *ngSwitchCase="false" class="container-fluid">
+   <h1 align="center">
+        Jaką tajemnice skrywa Lodz?
+    </h1>
+    <h2 align="center">Co takiego wydarzy sie w stolicy polskiej secesji? W miescie czterech kultur? </h2>
+    <h2 align="center">Czy starczy Ci sil i odwagi by przejrzeć szarady tajemnej organizacji i zdemaskowac jej sekret? </h2>
+    <ngb-carousel *ngIf="images" >
+        <ng-template ngbSlide>
+            <div class="wrapper">
+                <img [src]="images[0]" alt="Random first slide" class="w-100">
+            </div>
+            <div class="carousel-caption">
+                <h3><b>Zarejstruj sie i staw czoła wyzwaniu</b></h3>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="wrapper">
+                <img [src]="images[1]" alt="Random second slide" class="w-100">
+            </div>
+            <div class="carousel-caption">
+                <h3><b>Zarejstruj sie i staw czoła wyzwaniu</b></h3>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="wrapper">
+                <img [src]="images[2]"  alt="Random third slide" class="w-100">
+            </div>
+            <div class="carousel-caption">
+                <h3><b>Zarejstruj sie i staw czoła wyzwaniu</b></h3>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="wrapper">
+                <img [src]="images[3]"  alt="Random third slide" class="w-100">
+            </div>
+            <div class="carousel-caption">
+                <h3><b>Zarejstruj sie i staw czoła wyzwaniu</b></h3>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>
+
+
+<div  *ngSwitchCase="true" class="row">
+    <div class="col-md-3">
+        <span class="hipster img-fluid rounded"></span>
+    </div>
+
+    <div class="col-md-9" *ngIf="account" >
+        <h1 class="display-4">Witaj, {{ account.login }}!</h1>
+
+        <p class="lead">Dobrze Cie widziec, tylko Ty możesz mi pomóc!</p>
+
+        <div [ngSwitch]="isAuthenticated()">
+            <div >
+                <span id="home-logged-message" *ngIf="account">Nazywam sie Johnattan i jestem prywatnym detektywem.
+                Dowiedziałem się, że w najbliższym czasie w naszym mieście wydarzy się coś bardzo podejrzanego.
+                Sam nie dam rady rozwikłać tej zagadki! Tylko ktoś tak utalentowany jak ty, będzie w stanie rozwikłać tę zagadkę.
+                Przkaże ci wszystko czego dowiedziałem się do tej pory. Informacje, zostawie na twoim profilu w zakładce zadania.</span>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+</div>
