@@ -91,7 +91,7 @@ public class TaskServiceImpl implements TaskService {
                     TaskDTO newTask = new TaskDTO();
                     newTask.setTaskName("Drugie Tajne Zadanie");
                     newTask.setTaskDescription("Tutaj jest opis drugiego super tajnego zadania.");
-                    newTask.setImageUrl("https://upload.wikimedia.org/wikipedia/commons/c/c6/%C5%81%C3%B3d%C5%BA_-_rivers.svg");
+                    newTask.setImageUrl("../../content/images/task2.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
                     newTask.setQuestionId(2L);
@@ -107,7 +107,7 @@ public class TaskServiceImpl implements TaskService {
                     TaskDTO newTask = new TaskDTO();
                     newTask.setTaskName("Zaglebiajac sie w mroczne tajemnice LDZ");
                     newTask.setTaskDescription("\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"");
-                    newTask.setImageUrl("https://www.transport-publiczny.pl/img/20190306101016RynekKobrowizUML.jpg_678-443.jpg");
+                    newTask.setImageUrl("../../content/images/task3.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
                     newTask.setQuestionId(3L);
@@ -123,10 +123,25 @@ public class TaskServiceImpl implements TaskService {
                     TaskDTO newTask = new TaskDTO();
                     newTask.setTaskName("Final");
                     newTask.setTaskDescription("\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"");
-                    newTask.setImageUrl("https://lodz.travel/files/public/_processed_/2/5/csm_piotrkowska__29_of_31__66524abb36.jpg");
+                    newTask.setImageUrl("../../content/images/task4.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
                     newTask.setQuestionId(4L);
+                    save(newTask);
+                }
+            case "4":
+                if(answer.toLowerCase().equals("koniec"))
+                {
+                    returnValue = true;
+                    taskDTO.setIsCompleted(true);
+                    save(taskDTO);
+                    TaskDTO newTask = new TaskDTO();
+                    newTask.setTaskName("Gratulacje!!");
+                    newTask.setTaskDescription("\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"");
+                    newTask.setImageUrl("../../content/images/task4.png");
+                    newTask.setIsCompleted(true);
+                    newTask.setUserId(userId);
+                    newTask.setQuestionId(5L);
                     save(newTask);
                 }
                 break;

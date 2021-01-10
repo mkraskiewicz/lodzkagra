@@ -68,7 +68,7 @@ public class UserService {
                 TaskDTO newTask = new TaskDTO();
                 newTask.setTaskName("Poczatek przygody");
                 newTask.setTaskDescription("Pierwsze zadanie, pierdu pierdu. Poniżej jakis obrazek, mapa, co tam chcemy");
-                newTask.setImageUrl("https://thumbs.dreamstime.com/z/wielkie-otwarcie-4243844.jpg");
+                newTask.setImageUrl("../../content/images/task1.png");
                 newTask.setIsCompleted(false);
                 newTask.setUserId(user.getId());
                 newTask.setQuestionId(1L);
