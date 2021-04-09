@@ -8,7 +8,7 @@ export const ZADANIA_ROUTE: Route = {
   component: ZadaniaComponent,
   data: {
     authorities: [],
-    pageTitle: 'zadania.title',
+    pageTitle: 'Zadania Lodzkiej Gry',
   },
   canActivate: [UserRouteAccessService],
 };

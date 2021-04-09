@@ -68,7 +68,7 @@ public class UserService {
                 TaskDTO newTask = new TaskDTO();
                 newTask.setTaskName("Poczatek przygody");
                 newTask.setTaskDescription("Pierwsze zadanie, pierdu pierdu. Poniżej jakis obrazek, mapa, co tam chcemy");
-                newTask.setImageUrl("https://thumbs.dreamstime.com/z/wielkie-otwarcie-4243844.jpg");
+                newTask.setImageUrl("../../content/images/zadanie1.png");
                 newTask.setIsCompleted(false);
                 newTask.setUserId(user.getId());
                 newTask.setQuestionId(1L);
@@ -131,15 +131,29 @@ public class UserService {
         newUser.setImageUrl(userDTO.getImageUrl());
         newUser.setLangKey(userDTO.getLangKey());
         // new user is not active
-        newUser.setActivated(false);
+        newUser.setActivated(true);
         // new user gets registration key
-        newUser.setActivationKey(RandomUtil.generateActivationKey());
+        newUser.setActivationKey(null);
         Set<Authority> authorities = new HashSet<>();
         authorityRepository.findById(AuthoritiesConstants.USER).ifPresent(authorities::add);
         newUser.setAuthorities(authorities);
         userRepository.save(newUser);
         this.clearUserCaches(newUser);
         log.debug("Created Information for User: {}", newUser);
+
+        this.clearUserCaches(newUser);
+        log.debug("Activated user: {}", newUser);
+
+
+        TaskDTO newTask = new TaskDTO();
+        newTask.setTaskName("Poczatek przygody");
+        newTask.setTaskDescription("Prawdziwy detektyw powinien mieć dobrego nosa, nie tylko do kryminalnych zagadek! " +
+            "Odgadnij co próbujesz, zapisz kolejne produkty, pomogą ci poznać lokalizacje w której skrył się mój informator. On przekaże Ci więcej informacji. ");
+        newTask.setImageUrl("../../content/images/nos.png");
+        newTask.setIsCompleted(false);
+        newTask.setUserId(newUser.getId());
+        newTask.setQuestionId(1L);
+        taskService.save(newTask);
         return newUser;
     }
 

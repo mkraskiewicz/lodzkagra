@@ -83,15 +83,15 @@ public class TaskServiceImpl implements TaskService {
         boolean returnValue = false;
         switch(taskDTO.getQuestionId().toString()) {
             case "1":
-                if(answer.toLowerCase().equals("test"))
+                if(answer.toLowerCase().equals("park sledzia") || answer.toLowerCase().equals("park śledzia"))
                 {
                     returnValue = true;
                     taskDTO.setIsCompleted(true);
                     save(taskDTO);
                     TaskDTO newTask = new TaskDTO();
-                    newTask.setTaskName("Drugie Tajne Zadanie");
-                    newTask.setTaskDescription("Tutaj jest opis drugiego super tajnego zadania.");
-                    newTask.setImageUrl("https://upload.wikimedia.org/wikipedia/commons/c/c6/%C5%81%C3%B3d%C5%BA_-_rivers.svg");
+                    newTask.setTaskName("Spotkanie w dziczy");
+                    newTask.setTaskDescription("Mój informator przekaże ci tajny kod, ale tylko wtedy gdy pomożesz mu rozpracować szyfr stosowany przez Ludzi nikczemnego Wandeldorfa. Być może dzięki waszej współpracy uda nam się przejąć ich tajną wiadomość.");
+                    newTask.setImageUrl("../../content/images/zadanie2.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
                     newTask.setQuestionId(2L);
@@ -99,15 +99,15 @@ public class TaskServiceImpl implements TaskService {
                 }
                 break;
             case "2":
-                if(answer.toLowerCase().equals("abc"))
+                if(answer.toLowerCase().equals("brydz"))
                 {
                     returnValue = true;
                     taskDTO.setIsCompleted(true);
                     save(taskDTO);
                     TaskDTO newTask = new TaskDTO();
                     newTask.setTaskName("Zaglebiajac sie w mroczne tajemnice LDZ");
-                    newTask.setTaskDescription("\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"");
-                    newTask.setImageUrl("https://www.transport-publiczny.pl/img/20190306101016RynekKobrowizUML.jpg_678-443.jpg");
+                    newTask.setTaskDescription("Gratulacje! Swietna robota! Udalo Ci sie przejac tajna wiadomosc profesora Greka, pracującego dla Wandeldorfa. Tylko co to moze oznaczac?");
+                    newTask.setImageUrl("../../content/images/notka.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
                     newTask.setQuestionId(3L);
@@ -115,18 +115,115 @@ public class TaskServiceImpl implements TaskService {
                 }
                 break;
             case "3":
-                if(answer.toLowerCase().equals("admin"))
+                if(answer.toLowerCase().equals("liceum"))
+                {
+                    returnValue = true;
+                    taskDTO.setIsCompleted(true);
+                    save(taskDTO);
+                    TaskDTO newTask = new TaskDTO();
+                    newTask.setTaskName("Przeszlosc Wybranca");
+                    newTask.setTaskDescription("To jest milowy krok w kwestii pokrzyżowania planów Wandeldorfa! Już wiemy, że szykuje coś związanego z liceum! Może chodzi o to, co robiła osoba z przepowiedni za czasów swojej nauki w liceum? Słuchaj uważnie, bo świta mi pewien pomysł. Na Bałutach znajdź budynek, w którym znajdowało się przedwojenne kino. Ponoć w czasie wojny pełniło ono funkcję synagogi i odprawiano w nim nabożeństwa. \n" +
+                        "Po wojnie budynek powrócił na pewien czas do pierwotnej funkcji. \n" +
+                        "Bardziej aktualne historie głoszą, że odkąd budynek przestał być kinem, organizowano tam liczne koncerty. Podczas tych wydarzeń młode kobiety pogrążone w szale zabawy i upojone alkoholem zarywały stoły. Może tam, dowiemy się czegoś więcej.");
+
+                    newTask.setImageUrl("../../content/images/zadanie3.png");
+                    newTask.setIsCompleted(false);
+                    newTask.setUserId(userId);
+                    newTask.setQuestionId(4L);
+                    save(newTask);
+                }
+                break;
+            case "4":
+                if(answer.toLowerCase().equals("malpa") || answer.toLowerCase().equals("małpa"))
+                {
+                    returnValue = true;
+                    taskDTO.setIsCompleted(true);
+                    save(taskDTO);
+                    TaskDTO newTask = new TaskDTO();
+                    newTask.setTaskName("Haslo Johnatana");
+                    newTask.setTaskDescription("Małpa to ulubione zwierzątko Wandeldorfa, zakupił je w miejscowości na północ od Lodzi... czyzby wlasnie tam planowal tajne spotkanie swojego bractwa? Hmmm, udalo mi sie zlokalizować jego człowieka, dane przesyłam kodem, by nie dostały się w niepowołane ręce. Użyłem szyfru naszego chemika, profesora Sznujpa.");
+                    newTask.setImageUrl("../../content/images/mende.png");
+                    newTask.setIsCompleted(false);
+                    newTask.setUserId(userId);
+                    newTask.setQuestionId(5L);
+                    save(newTask);
+                }
+                break;
+            case "5":
+                if(answer.toLowerCase().equals("racuchy"))
+                {
+                    returnValue = true;
+                    taskDTO.setIsCompleted(true);
+                    save(taskDTO);
+                    TaskDTO newTask = new TaskDTO();
+                    newTask.setTaskName("Gdzie jada Wandeldorf?");
+                    newTask.setTaskDescription("Bingo, mój człowiek znajduje się w miejscu w którym Wandeldorf uwielbia zamawiać racuchy. Knajpie zalozonej przez standupera z Lodzi. Szybko! Pędź tam czym prędzej!");
+                    newTask.setImageUrl("../../content/images/kurtyna.png");
+                    newTask.setIsCompleted(false);
+                    newTask.setUserId(userId);
+                    newTask.setQuestionId(7L);
+                    save(newTask);
+                }
+                break;
+
+            case "7":
+                if(answer.toLowerCase().equals("harmi"))
+                {
+                    returnValue = true;
+                    taskDTO.setIsCompleted(true);
+                    save(taskDTO);
+                    TaskDTO newTask = new TaskDTO();
+                    newTask.setTaskName("Diablica");
+                    newTask.setTaskDescription("\"Pomagiero Lucyfera!\n" +
+                        "Jesteś już blisko, jednak zanim dotrzesz do końca, przeniesiesz się tam, gdzie wszystko się zaczęło. Przygotuj się na mentalną wycieczkę do czasów LOPŁ. Lata już nie te, także skup się, wytęż pamięć i zepnij poślady: przed Tobą nieBrzeska Krzyżówka! Rozwiązanie wskaże punkt, w którym zakończy się (?) Twoja krucjata. Niech moc Pomiotów i cytrynówki będzie z Tobą!\n" +
+                        "Sroga Bździocha Molocha\"");
+
+
+
+                    newTask.setImageUrl("../../content/images/diabel.png");
+                    newTask.setIsCompleted(false);
+                    newTask.setUserId(userId);
+                    newTask.setQuestionId(8L);
+                    save(newTask);
+                }
+                break;
+
+            case "8":
+                if(answer.toLowerCase().equals("krówka destylacyjna") || answer.toLowerCase().equals("krowka destylacyjna"))
+                {
+                    returnValue = true;
+                    taskDTO.setIsCompleted(true);
+                    save(taskDTO);
+                    TaskDTO newTask = new TaskDTO();
+                    newTask.setTaskName("Ostatnia prosta");
+                    newTask.setTaskDescription("Wszystko jest już jasne! Dzięki dowodom które zebrałaś, udało się nam ustalić, że Wandeldorf planuje bal! To idealne miejsce żeby zdemaskować jego nikczemne plany!" +
+                        "Musisz udać się na jego bankiet, jednak by nie wzbudzić podejrzeń, powinnaś się odpowiednio naszykować. Mam swoją ekipe koło pewnego kościoła. Koło Sektora? Pola? Parceli? Działki? Włości Kościelnej? Chyba wiesz co mam na myśli? ");
+
+
+
+                    newTask.setImageUrl("../../content/images/malowanie.png");
+                    newTask.setIsCompleted(false);
+                    newTask.setUserId(userId);
+                    newTask.setQuestionId(9L);
+                    save(newTask);
+                }
+                break;
+            case "9":
+                if(answer.toLowerCase().equals("urodziny"))
                 {
                     returnValue = true;
                     taskDTO.setIsCompleted(true);
                     save(taskDTO);
                     TaskDTO newTask = new TaskDTO();
                     newTask.setTaskName("Final");
-                    newTask.setTaskDescription("\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"");
-                    newTask.setImageUrl("https://lodz.travel/files/public/_processed_/2/5/csm_piotrkowska__29_of_31__66524abb36.jpg");
+                    newTask.setTaskDescription("Jesteśmy gotowi! Zdemaskuj Wandeldorfa w jego siedzibie podczas wielkiego Balu jego Bractwa. Pokrzyżuj jego niecne plany! P.S. 51.882807111100014, 19.287381065850433");
+
+
+
+                    newTask.setImageUrl("../../content/images/mapalodzi.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
-                    newTask.setQuestionId(4L);
+                    newTask.setQuestionId(10L);
                     save(newTask);
                 }
                 break;
