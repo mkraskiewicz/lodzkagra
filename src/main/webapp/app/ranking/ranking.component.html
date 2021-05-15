@@ -1,0 +1,316 @@
+<!--<div class="row">-->
+<!--  <div class="col-md-1"></div>-->
+<!--  <div class="col-md-10">-->
+<!--    <h6 class="text-right"></h6>-->
+<!--    <h1 class="text-capitalize text-center">{{tasks![tasks!.length - 1].questionId}}</h1>-->
+<!--    <h5 class="text-center">{{tasks.taskDescription}}</h5>-->
+<!--    <hr/>-->
+<!--    <p class="text-justify">{{ account!.login }}</p>-->
+<!--  </div>-->
+<!--  <div class="col-md-1"></div>-->
+<!--</div>-->
+
+
+<div *ngIf="tasks![tasks!.length - 1].questionId===1">
+<table class="table table-striped" aria-describedby="page-heading">
+    <thead>
+    <tr>
+        <th scope="col" ><span>Punktacja</span></th>
+        <th scope="col" ><span>Zespół</span></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>PLOPŁ Klasa A</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>Fani Rzepy</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>Złowieszcze Wombaty</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>Hunctwoty</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>{{ account!.login }}</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>Drużyna Pierścienia</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+
+<div *ngIf="tasks![tasks!.length - 1].questionId===2">
+    <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+        <tr>
+            <th scope="col" ><span>Punktacja</span></th>
+            <th scope="col" ><span>Zespół</span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>2</td>
+            <td>PLOPŁ Klasa A</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Fani Rzepy</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Złowieszcze Wombaty</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Hunctwoty</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>{{ account!.login }}</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>Drużyna Pierścienia</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div *ngIf="tasks![tasks!.length - 1].questionId===3">
+    <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+        <tr>
+            <th scope="col" ><span>Punktacja</span></th>
+            <th scope="col" ><span>Zespół</span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>3</td>
+            <td>PLOPŁ Klasa A</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Fani Rzepy</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Złowieszcze Wombaty</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>{{ account!.login }}</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Hunctwoty</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>Drużyna Pierścienia</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<div *ngIf="tasks![tasks!.length - 1].questionId===4">
+    <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+        <tr>
+            <th scope="col" ><span>Punktacja</span></th>
+            <th scope="col" ><span>Zespół</span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>5</td>
+            <td>PLOPŁ Klasa A</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Fani Rzepy</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Złowieszcze Wombaty</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>{{ account!.login }}</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Hunctwoty</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>Drużyna Pierścienia</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="tasks![tasks!.length - 1].questionId===5">
+    <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+        <tr>
+            <th scope="col" ><span>Punktacja</span></th>
+            <th scope="col" ><span>Zespół</span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>5</td>
+            <td>PLOPŁ Klasa A</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Fani Rzepy</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>{{ account!.login }}</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Złowieszcze Wombaty</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Hunctwoty</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Drużyna Pierścienia</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="tasks![tasks!.length - 1].questionId===6">
+    <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+        <tr>
+            <th scope="col" ><span>Punktacja</span></th>
+            <th scope="col" ><span>Zespół</span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>6</td>
+            <td>PLOPŁ Klasa A</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Fani Rzepy</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>{{ account!.login }}</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Złowieszcze Wombaty</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Hunctwoty</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Drużyna Pierścienia</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="tasks![tasks!.length - 1].questionId===7">
+    <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+        <tr>
+            <th scope="col" ><span>Punktacja</span></th>
+            <th scope="col" ><span>Zespół</span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>6</td>
+            <td>PLOPŁ Klasa A</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>{{ account!.login }}</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Fani Rzepy</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Złowieszcze Wombaty</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Hunctwoty</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Drużyna Pierścienia</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div *ngIf="tasks![tasks!.length - 1].questionId===8">
+    <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+        <tr>
+            <th scope="col" ><span>Punktacja</span></th>
+            <th scope="col" ><span>Zespół</span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>7</td>
+            <td>{{ account!.login }}</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>PLOPŁ Klasa A</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Fani Rzepy</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Złowieszcze Wombaty</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Hunctwoty</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Drużyna Pierścienia</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

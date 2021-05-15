@@ -9,6 +9,7 @@ import { LodzkagraHomeModule } from './home/home.module';
 import { LodzkagraEntityModule } from './entities/entity.module';
 import { LodzkagraAppZadaniaModule } from './zadania/zadania.module';
 import { Injector, NO_ERRORS_SCHEMA } from '@angular/core';
+import { LodzkagraAppRankingModule } from './ranking/ranking.module';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { MainComponent } from './layouts/main/main.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
@@ -23,6 +24,7 @@ import { ErrorComponent } from './layouts/error/error.component';
     LodzkagraCoreModule,
     LodzkagraHomeModule,
     LodzkagraAppZadaniaModule,
+    LodzkagraAppRankingModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     LodzkagraEntityModule,
     LodzkagraAppRoutingModule,

@@ -1,0 +1,1 @@
+describe('RankingComponent Tests', () => {});

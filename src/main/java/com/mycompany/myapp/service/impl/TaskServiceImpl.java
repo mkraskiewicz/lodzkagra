@@ -83,14 +83,14 @@ public class TaskServiceImpl implements TaskService {
         boolean returnValue = false;
         switch(taskDTO.getQuestionId().toString()) {
             case "1":
-                if(answer.toLowerCase().equals("park sledzia") || answer.toLowerCase().equals("park śledzia"))
+                if(answer.toLowerCase().equals("masterchef") || answer.toLowerCase().equals("master chef"))
                 {
                     returnValue = true;
                     taskDTO.setIsCompleted(true);
                     save(taskDTO);
                     TaskDTO newTask = new TaskDTO();
                     newTask.setTaskName("Spotkanie w dziczy");
-                    newTask.setTaskDescription("Mój informator przekaże ci tajny kod, ale tylko wtedy gdy pomożesz mu rozpracować szyfr stosowany przez Ludzi nikczemnego Wandeldorfa. Być może dzięki waszej współpracy uda nam się przejąć ich tajną wiadomość.");
+                    newTask.setTaskDescription("Mój informator przekaże ci tajny kod, ale tylko wtedy gdy pomożesz mu rozpracować szyfr stosowany przez Ludzi nikczemnego Wandeldorfa. Być może dzięki waszej współpracy uda nam się przejąć ich tajną wiadomość. Lubi śledzie i ukrył się w dziczy. Gdzie w Lodzi znajde śledzie i drzewa?!");
                     newTask.setImageUrl("../../content/images/zadanie2.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
@@ -99,14 +99,14 @@ public class TaskServiceImpl implements TaskService {
                 }
                 break;
             case "2":
-                if(answer.toLowerCase().equals("brydz"))
+                if(answer.toLowerCase().equals("ampy"))
                 {
                     returnValue = true;
                     taskDTO.setIsCompleted(true);
                     save(taskDTO);
                     TaskDTO newTask = new TaskDTO();
                     newTask.setTaskName("Zaglebiajac sie w mroczne tajemnice LDZ");
-                    newTask.setTaskDescription("Gratulacje! Swietna robota! Udalo Ci sie przejac tajna wiadomosc profesora Greka, pracującego dla Wandeldorfa. Tylko co to moze oznaczac?");
+                    newTask.setTaskDescription("Gratulacje! Swietna robota! Udalo Ci sie przejac tajna wiadomosc agenta pracującego dla Wandeldorfa. Tylko co to moze oznaczac? To słowo? Numerki? Literki? Te wartości liczbowe coś oznaczają?");
                     newTask.setImageUrl("../../content/images/notka.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
@@ -126,7 +126,7 @@ public class TaskServiceImpl implements TaskService {
                         "Po wojnie budynek powrócił na pewien czas do pierwotnej funkcji. \n" +
                         "Bardziej aktualne historie głoszą, że odkąd budynek przestał być kinem, organizowano tam liczne koncerty. Podczas tych wydarzeń młode kobiety pogrążone w szale zabawy i upojone alkoholem zarywały stoły. Może tam, dowiemy się czegoś więcej.");
 
-                    newTask.setImageUrl("../../content/images/zadanie3.png");
+                    newTask.setImageUrl("../../content/images/mapalodzi.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
                     newTask.setQuestionId(4L);
@@ -141,7 +141,7 @@ public class TaskServiceImpl implements TaskService {
                     save(taskDTO);
                     TaskDTO newTask = new TaskDTO();
                     newTask.setTaskName("Haslo Johnatana");
-                    newTask.setTaskDescription("Małpa to ulubione zwierzątko Wandeldorfa, zakupił je w miejscowości na północ od Lodzi... czyzby wlasnie tam planowal tajne spotkanie swojego bractwa? Hmmm, udalo mi sie zlokalizować jego człowieka, dane przesyłam kodem, by nie dostały się w niepowołane ręce. Użyłem szyfru naszego chemika, profesora Sznujpa.");
+                    newTask.setTaskDescription("Małpa to ulubione zwierzątko Wandeldorfa, zakupił je gdzieś w Lodzi. Czyzby wlasnie tam planowal tajne spotkanie swojego bractwa? Hmmm, udalo mi sie zlokalizować jego człowieka, dane przesyłam kodem, by nie dostały się w niepowołane ręce. Użyłem szyfru naszego chemika, profesora Mendelejewa.");
                     newTask.setImageUrl("../../content/images/mende.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
@@ -161,13 +161,13 @@ public class TaskServiceImpl implements TaskService {
                     newTask.setImageUrl("../../content/images/kurtyna.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
-                    newTask.setQuestionId(7L);
+                    newTask.setQuestionId(6L);
                     save(newTask);
                 }
                 break;
 
-            case "7":
-                if(answer.toLowerCase().equals("harmi"))
+            case "6":
+                if(answer.toLowerCase().equals("piotrkowska"))
                 {
                     returnValue = true;
                     taskDTO.setIsCompleted(true);
@@ -183,50 +183,31 @@ public class TaskServiceImpl implements TaskService {
                     newTask.setImageUrl("../../content/images/diabel.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
-                    newTask.setQuestionId(8L);
+                    newTask.setQuestionId(7L);
                     save(newTask);
                 }
                 break;
 
-            case "8":
+            case "7":
                 if(answer.toLowerCase().equals("krówka destylacyjna") || answer.toLowerCase().equals("krowka destylacyjna"))
                 {
                     returnValue = true;
                     taskDTO.setIsCompleted(true);
                     save(taskDTO);
                     TaskDTO newTask = new TaskDTO();
-                    newTask.setTaskName("Ostatnia prosta");
-                    newTask.setTaskDescription("Wszystko jest już jasne! Dzięki dowodom które zebrałaś, udało się nam ustalić, że Wandeldorf planuje bal! To idealne miejsce żeby zdemaskować jego nikczemne plany!" +
-                        "Musisz udać się na jego bankiet, jednak by nie wzbudzić podejrzeń, powinnaś się odpowiednio naszykować. Mam swoją ekipe koło pewnego kościoła. Koło Sektora? Pola? Parceli? Działki? Włości Kościelnej? Chyba wiesz co mam na myśli? ");
+                    newTask.setTaskName("Gratulacje");
+                    newTask.setTaskDescription("Wszystko jest już jasne! Dzięki dowodom które zebrałaś, udało się zdemaskować Wandeldorfa! Wygląda na to, że to koniec przygody? ");
 
 
 
-                    newTask.setImageUrl("../../content/images/malowanie.png");
+                    newTask.setImageUrl("../../content/images/zadanie3.png");
                     newTask.setIsCompleted(false);
                     newTask.setUserId(userId);
-                    newTask.setQuestionId(9L);
+                    newTask.setQuestionId(8L);
                     save(newTask);
                 }
                 break;
-            case "9":
-                if(answer.toLowerCase().equals("urodziny"))
-                {
-                    returnValue = true;
-                    taskDTO.setIsCompleted(true);
-                    save(taskDTO);
-                    TaskDTO newTask = new TaskDTO();
-                    newTask.setTaskName("Final");
-                    newTask.setTaskDescription("Jesteśmy gotowi! Zdemaskuj Wandeldorfa w jego siedzibie podczas wielkiego Balu jego Bractwa. Pokrzyżuj jego niecne plany! P.S. 51.882807111100014, 19.287381065850433");
 
-
-
-                    newTask.setImageUrl("../../content/images/mapalodzi.png");
-                    newTask.setIsCompleted(false);
-                    newTask.setUserId(userId);
-                    newTask.setQuestionId(10L);
-                    save(newTask);
-                }
-                break;
             default:
         }
         return taskDTO;
